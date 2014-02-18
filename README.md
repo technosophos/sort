@@ -39,6 +39,7 @@ To clone this repo:
   
   
 [To report issues:](https://github.com/X8462/sort/issues)
+----------------
   https://github.com/X8462/sort/issues
   or,
   email: cbijayananda@luc.edu
