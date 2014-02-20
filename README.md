@@ -17,6 +17,11 @@ For Data in a file that are:
   * Reversed
 
 
+Console View
+-----------
+
+![ConsoleView](https://raw.github.com/X8462/sort/master/Sorting/ProgramRunProof.png)
+
 
 
 Result:
