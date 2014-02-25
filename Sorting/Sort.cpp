@@ -82,14 +82,14 @@ int findcount(char * filename)
 		cout << "The file could not be opened. Check the location.\t"; 
 		return false;
 	}
-    int * number = new int [5];		//create an array of numbers 
+	int * number = new int [5];		//create an array of numbers 
 	int n = 0;						//n is the counter
-    while(in.peek()!=EOF)		
+	while(in.peek()!=EOF)		
 	{
 		in >> number[0];			//reads the file
 		n++;						//for each read, the counter is updated
 	}								
-    in.clear(); 
+	in.clear(); 
 	in.close();
 	return n;						//returns the length of the sequence
 }
@@ -162,21 +162,21 @@ void merge(int *numArray, int low, int high, int mid)
 	C = new int[high+1];							//high = count - 1, hence, temp array C is sized high + 1
 	int i, j, k;
 	i = low;      									//index for first part
-    j = mid+1;    									//index for second part
-    k = 0;        									//index for array C
-    while((i <= mid) && (j <= high))				
-    {
-        if(numArray[i] < numArray[j]) 
-			C[k] = numArray[i++];
-        else 
-			C[k] = numArray[j++];
-        k++;
-    }
-    while(i <= mid) 
+	j = mid+1;    									//index for second part
+	k = 0;        									//index for array C
+	while((i <= mid) && (j <= high))				
+	{
+			if(numArray[i] < numArray[j]) 
+				C[k] = numArray[i++];
+			else 
+				C[k] = numArray[j++];
+			k++;
+	}
+	while(i <= mid) 
 		C[k++] = numArray[i++];
-    while(j <= high) 
+	while(j <= high) 
 		C[k++] = numArray[j++];
-    for(i = low, j = 0; i <= high; i++, j++) 
+	for(i = low, j = 0; i <= high; i++, j++) 
 		numArray[i] = C[j];
 }
 /* Function: MergeSort
@@ -275,7 +275,7 @@ void swap(int *x, int *y)
 void QuickSort(int* numArray, int low, int high)
 {
 	int i = low;
-    int j = high;
+	int j = high;
 	int element;
 	int piv = numArray[(low + high) / 2];		// partition
 	while (i <= j)
@@ -294,9 +294,9 @@ void QuickSort(int* numArray, int low, int high)
 	}
     
 	if (low < j)
-    {
+		{
 		QuickSort(numArray, low, j);
-    }
+		}
 	if (i < high)
     {
 		QuickSort(numArray, i, high);
